@@ -6,7 +6,7 @@ test.describe('Navigation test', () => {
 		await page.goto('https://tap-ht24-testverktyg.github.io/exam-template/')
 	})
 
-    test('We test navigation between three tabs', async ({ page }) => {
+    test('navigera mellan olika vyer', async ({ page }) => {
         const addBookButton = page.getByRole('button', {name: 'Lägg till bok'})
 		const catalogueButton = page.getByRole('button', {name: 'Katalog'})
 		const myBookButton = page.getByRole('button', {name: 'Mina böcker'})
@@ -14,33 +14,33 @@ test.describe('Navigation test', () => {
 		const visibleMyBooksEmpty = page.getByText('När du valt')
 		const visibleTitle = page.getByText('Titel')
 
-        await expect(page).toHaveTitle(/Läslistan/); //make sure that the page title is correct
+        await expect(page).toHaveTitle(/Läslistan/); // Kontrollera att sidans titel är korrekt
 
-        // 1. Click on "Lägg till bok" navigation button and label "Titel" must be visible
+        // 1. Klicka på "Lägg till bok" navigeringsknapp och kontrollera att etiketten "Titel" är synlig
         await addBookButton.click({ timeout: 2000 })
 		await expect(visibleTitle).toBeVisible({ timeout: 2000 })
 
-        // 2. Click on "Katalog" navigation button so text "Bertil Flimmer" will be visible.
+        // 2. Klicka på "Katalog" navigeringsknapp och kontrollera att texten "Bertil Flimmer" är synlig
         await catalogueButton.click({ timeout: 2000 })
 		await expect(visibleBertil).toBeVisible({ timeout: 2000 })
 
-        // 3. Click on "Mina böcker" navigation button so text "När du valt" will be visible.
+        // 3. Klicka på "Mina böcker" navigeringsknapp och kontrollera att texten "När du valt" är synlig
         await myBookButton.click({ timeout: 2000 })
 		await expect(visibleMyBooksEmpty).toBeVisible({ timeout: 2000 })
 
-        // 4. Click on "Katalog" navigation button so text "Bertil Flimmer" will be visible.
+        // 4. Klicka på "Katalog" navigeringsknapp och kontrollera att texten "Bertil Flimmer" är synlig
         await catalogueButton.click({ timeout: 2000 })
 		await expect(visibleBertil).toBeVisible({ timeout: 2000 })
 
-        // 5. Click on "Mina böcker" navigation button so text "När du valt" will be visible.
+        // 5. Klicka på "Mina böcker" navigeringsknapp och kontrollera att texten "När du valt" är synlig
         await myBookButton.click({ timeout: 2000 })
 		await expect(visibleMyBooksEmpty).toBeVisible({ timeout: 2000 })
 
-        // 6. Click on "Lägg till bok" navigation button and label "Titel" must be visible
+        // 6. Klicka på "Lägg till bok" navigeringsknapp och kontrollera att etiketten "Titel" är synlig
         await addBookButton.click({ timeout: 2000 })
 		await expect(visibleTitle).toBeVisible({ timeout: 2000 })
 
-        // 7. Click on "Mina böcker" navigation button so text "När du valt" will be visible.
+        // 7. Klicka på "Mina böcker" navigeringsknapp och kontrollera att texten "När du valt" är synlig
         await myBookButton.click({ timeout: 2000 })
 		await expect(visibleMyBooksEmpty).toBeVisible({ timeout: 2000 })
     })
