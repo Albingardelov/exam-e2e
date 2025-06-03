@@ -6,6 +6,8 @@ module.exports = defineConfig({
   reporter: 'list',
   use: {
     trace: 'on-first-retry',
+    actionTimeout: 2000,
+    navigationTimeout: 2000,
   },
   projects: [
     {
