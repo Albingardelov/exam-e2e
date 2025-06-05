@@ -1,7 +1,5 @@
 # End-to-End Testing för Läslista-applikation
 
-## Projektbeskrivning
-Detta projekt innehåller E2E-tester för "Läslistan", en app där användare kan favoritmarkera böcker. Testerna är skrivna med Playwright och täcker funktionalitet som navigering, lägga till böcker, och hantera favoriter.
 
 ## User Stories
 
@@ -29,15 +27,6 @@ Detta projekt innehåller E2E-tester för "Läslistan", en app där användare k
 - Implementerade tester för att ta bort och åter lägga till böcker som favoriter.
 - Implementerade tester för att kontrollera att favoriter förblir synliga efter navigering.
 
-## Kommandon
-- Kör alla tester: `npm test`
-
-## Teknisk information
-
-- Använder Playwright för end-to-end testing
-- Tester körs i Chromium, Firefox och WebKit
-- Timeout inställd till 2000ms på grund av långsam internetanslutning
-- Tester körs parallellt för effektivitet
 
 ## Kommande tester
 - Tester för att markera böcker som favoriter
