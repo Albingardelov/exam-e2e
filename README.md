@@ -21,11 +21,15 @@
 - **Navigeringstester:** Verifierar att användaren kan navigera mellan olika vyer (Katalog, Lägga till bok, Mina böcker).
 - **Lägga till bok-tester:** Verifierar att användaren kan lägga till nya böcker i katalogen.
 - **Favorit-tester:** Verifierar att användaren kan markera böcker som favoriter, ta bort favoriter, och att favoriter förblir synliga efter navigering.
+- **Flera böcker-tester:** Verifierar att användaren kan lägga till flera böcker i sekvens och att alla böcker visas korrekt i katalogen.
+- **Komplett användarflöde-tester:** Verifierar hela användarflödet från att lägga till en bok, markera den som favorit, navigera mellan vyer, och ta bort den från favoriter.
 
 ## Senaste uppdateringar
 - Ökade timeout-värden för att hantera långsamma internetanslutningar.
 - Implementerade tester för att ta bort och åter lägga till böcker som favoriter.
 - Implementerade tester för att kontrollera att favoriter förblir synliga efter navigering.
+- Lagt till test för att lägga till flera böcker i sekvens.
+- Lagt till test för komplett användarflöde med navigering och favorit-hantering.
 
 
 ## Kommande tester
