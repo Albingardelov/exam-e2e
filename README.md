@@ -1,6 +1,7 @@
 # End-to-End Testing för Läslista-applikation
 
-Detta projekt innehåller end-to-end tester för en läslista-applikation, skrivna med Playwright.
+## Projektbeskrivning
+Detta projekt innehåller E2E-tester för "Läslistan", en app där användare kan favoritmarkera böcker. Testerna är skrivna med Playwright och täcker funktionalitet som navigering, lägga till böcker, och hantera favoriter.
 
 ## User Stories
 
@@ -19,19 +20,17 @@ Detta projekt innehåller end-to-end tester för en läslista-applikation, skriv
    - Som användare vill jag kunna ta bort böcker från mina favoriter genom att klicka på hjärtat igen
 
 ## Implementerade tester
+- **Navigeringstester:** Verifierar att användaren kan navigera mellan olika vyer (Katalog, Lägga till bok, Mina böcker).
+- **Lägga till bok-tester:** Verifierar att användaren kan lägga till nya böcker i katalogen.
+- **Favorit-tester:** Verifierar att användaren kan markera böcker som favoriter, ta bort favoriter, och att favoriter förblir synliga efter navigering.
 
-### Navigeringstester
-- Verifierar att användaren kan navigera till alla vyer
-- Kontrollerar att rätt rubrik visas på varje sida
+## Senaste uppdateringar
+- Ökade timeout-värden för att hantera långsamma internetanslutningar.
+- Implementerade tester för att ta bort och åter lägga till böcker som favoriter.
+- Implementerade tester för att kontrollera att favoriter förblir synliga efter navigering.
 
-### Lägga till bok-tester
-- Verifierar att användaren kan lägga till en ny bok
-- Kontrollerar att boken visas i katalogen efter tillägg
-
-### Favoritbok-tester (kommande)
-- Verifierar att användaren kan markera en bok som favorit
-- Kontrollerar att favoritboken visas under "Mina böcker"
-- Verifierar att användaren kan ta bort en bok från favoriter
+## Kommandon
+- Kör alla tester: `npm test`
 
 ## Teknisk information
 

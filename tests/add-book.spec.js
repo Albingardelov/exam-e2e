@@ -1,9 +1,11 @@
 import { test, expect } from '@playwright/test';
 
+const TIMEOUT = 30000;
+
 test.describe('add new book feature test', () => {
     
     test.beforeEach(async ({ page }) => {
-        await page.goto('https://tap-ht24-testverktyg.github.io/exam-template/')
+        await page.goto('https://tap-ht24-testverktyg.github.io/exam-template/', { timeout: TIMEOUT })
     })
 
     test('Testing adding of a new book to catalogue', async ({ page }) => {
@@ -19,18 +21,18 @@ test.describe('add new book feature test', () => {
         await expect(page).toHaveTitle(/Läslistan/);
 
         // 1. Klicka på "Lägg till bok" navigeringsknapp och kontrollera att etiketten "Titel" är synlig
-        await addBookButton.click({ timeout: 2000 })
-        await expect(visibleTitle).toBeVisible({ timeout: 2000 })
+        await addBookButton.click({ timeout: TIMEOUT })
+        await expect(visibleTitle).toBeVisible({ timeout: TIMEOUT })
 
         // 2. Fyll i formuläret: "testTitle" i Titelfältet och "testAuthor" i författarfältet
-        await titleInput.fill('testTitle', { timeout: 2000 });
-        await authorInput.fill('testAuthor', { timeout: 2000 });
+        await titleInput.fill('testTitle', { timeout: TIMEOUT });
+        await authorInput.fill('testAuthor', { timeout: TIMEOUT });
 
         // 3. Klicka på "Lägg till ny bok" knappen under Författare-fältet
-        await addNewBookBtn.click({ timeout: 2000 })
+        await addNewBookBtn.click({ timeout: TIMEOUT })
 
         // 4. Klicka på "Katalog" navigeringsknapp och kontrollera att texten "testAuthor" är synlig
-        await catalogueButton.click({ timeout: 2000 })
-        await expect(visibleTestAuthor).toBeVisible({ timeout: 2000 })
+        await catalogueButton.click({ timeout: TIMEOUT })
+        await expect(visibleTestAuthor).toBeVisible({ timeout: TIMEOUT })
     })
 }) 
